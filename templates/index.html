@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="us">
+<head>
+    <meta charset="UTF-8">
+    <title>Reservation system</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Reservation</h1>
+
+    {% if message %}
+        <p class="message">{{ message }}</p>
+    {% endif %}
+    {% if send_info %}
+        <p class="info">{{ send_info }}</p>
+    {% endif %}
+
+
+    <form method="POST" class="form">
+        <div class="form-row">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-row">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-row">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+        </div>
+
+        <div class="form-row">
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+        </div>
+
+        <button type="submit">Reservation</button>
+    </form>
+</body>
+</html>

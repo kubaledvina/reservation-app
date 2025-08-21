@@ -1,0 +1,101 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+h1{
+    margin-bottom: 50px;
+}
+
+form {
+    display: inline-block;
+    text-align: left;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #113F67;
+    background-color: #f9f9f9;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.form-row label {
+  width: 80px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.form-row input {
+  flex: 1;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.message{
+    font-weight: bold;
+    color: red;
+}
+
+.info{
+    font-weight: bold;
+    color: blue;
+ }
+
+
+
+# admin site
+
+.container{
+    width: 600px;
+    margin: 0 auto;
+}
+
+.table-wrapper{
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgb(51, 56, 160, 0.2)
+}
+
+.reservations-table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.reservations-table thead{
+    background-color: #074799;
+    color: white;
+}
+
+.reservations-table th,
+.reservations-table td{
+    padding: 15px;
+    text-align: centre;
+}
+
+.reservations-table tbody tr{
+    border-bottom: 1px solid #074799;
+}
+
+
+

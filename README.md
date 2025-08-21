@@ -1,6 +1,6 @@
 #  Flask Reservation System
 
-![Application preview](screenshot.png)
+![Application preview](screenshot.jpg)
 
 A simple web application for managing reservations with email confirmation. Built using Flask, SQLite, and HTML templates.
 

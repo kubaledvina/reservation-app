@@ -17,6 +17,7 @@ def init_db():
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             name TEXT NOT  NULL,
             email TEXT NOT NULL,
+            phone TEXT NOT NULL,
             date TEXT NOT NULL,
             time TEXT NOT NULL
         )
@@ -49,6 +50,7 @@ def index():
     if request.method == "POST":
         name = request.form["name"]
         email = request.form["email"]
+        phone = request.form["phone"]
         date = request.form["date"]
         time = request.form["time"]
 
@@ -62,8 +64,8 @@ def index():
             conn.close()
             return render_template("index.html", message="This date is already booked!")
 
-        c.execute("INSERT INTO reservations (name, email, date, time) VALUES (?, ?, ?, ?)",
-                  (name, email, date, time))
+        c.execute("INSERT INTO reservations (name, email, phone, date, time) VALUES (?, ?, ?, ?, ?)",
+                  (name, email, phone, date, time))
         conn.commit()
         conn.close()
 
@@ -72,7 +74,8 @@ def index():
         except Exception as e:
             print("Error send email:", e)
 
-        return render_template("index.html", message=f"Reservation on {date} v {time}.", send_info=f"Send email on {email}")
+        return render_template("index.html", message=f"Reservation on {date} v {time}.",
+                               send_info=f"Send email on {email}")
 
     return render_template("index.html")
 
